@@ -8,5 +8,9 @@
       <ProjectReference Include="..\Exercicio03.Application\Exercicio03.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    </ItemGroup>
+
 
 </Project>
