@@ -1,15 +1,15 @@
-# prova-npf
-Exercícios propostas para Prova da NPF
+# Prova NPF
+Exercícios propostos para prova
 
-## Questao 1)
+## Questão 1)
 
-Ao Quadrado, vide testes
+R: Ao Quadrado, vide testes
 
-## Questao 2)
+## Questão 2)
 
-C1 + C2 + C3
+R: C1 + C2 + C3
 
-### Questao 3)
+## Questão 3)
 
 ```
 docker-compose up
