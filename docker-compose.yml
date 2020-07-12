@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  exercicio03.api:
+    image: ${REGISTRY:-provanpf}/exercicio03api:${PLATFORM:-linux}-${TAG:-latest}
+    container_name: exercicio03_api
+    build:
+      context: .
+      dockerfile: Exercicio03.API/Dockerfile
+    networks:
+      - backend
+    
+      
+networks: 
+  backend:
+    driver: bridge
