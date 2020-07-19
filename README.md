@@ -10,11 +10,8 @@ R: Ao Quadrado, vide testes
 
 Console App utilizando .NET 
 
-<<<<<<< HEAD
 ### Instruções para execução
 
-=======
->>>>>>> af237b18626f098f61386bd5d1cf4bbd216aa644
 ```
 docker-compose up --build exercicio02.app
 ```
