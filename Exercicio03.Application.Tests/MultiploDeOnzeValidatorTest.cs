@@ -6,7 +6,13 @@ namespace Exercicio03.Application.Tests
 {
     public class MultiploDeOnzeValidatorTest
     {
-        
+        private IMultiploDeOnzeValidator validator;
+
+        public MultiploDeOnzeValidatorTest(IMultiploDeOnzeValidator validator)
+        {
+            this.validator = validator;
+        }
+
         [Theory()]
         [InlineData(286, true)]
         [InlineData(1331, true)]
@@ -16,7 +22,7 @@ namespace Exercicio03.Application.Tests
         [InlineData(56568143, false)]
         public void Retornar_Verdadeiro_Quando_Numero_For_Multiplo_de_Onze(int numero, bool valido)
         {
-            var resultado = new MultiploDeOnzeValidator().Validar(numero);
+            var resultado = this.validator.Validar(numero);
         
             Assert.Equal(valido, resultado);
         }

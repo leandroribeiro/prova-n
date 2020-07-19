@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace Exercicio03.Application
 {
-    public class MultiploDeOnzeValidator
+    public class MultiploDeOnzeValidator : IMultiploDeOnzeValidator
     {
         public bool Validar(int numero)
         {

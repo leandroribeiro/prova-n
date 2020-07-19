@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Exercicio03.API.Model;
 using Exercicio03.Application;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exercicio03.API.Controllers
@@ -12,11 +9,11 @@ namespace Exercicio03.API.Controllers
     [Route("[controller]")]
     public class ValidadorController
     {
-        private MultiploDeOnzeValidator _multiploDeOnze;
+        private readonly IMultiploDeOnzeValidator _multiploDeOnze;
 
-        public ValidadorController()
+        public ValidadorController(IMultiploDeOnzeValidator multiploDeOnze)
         {
-            _multiploDeOnze = new MultiploDeOnzeValidator();
+            _multiploDeOnze = multiploDeOnze;
         }
 
         [HttpPost]
