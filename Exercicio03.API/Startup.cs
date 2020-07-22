@@ -33,11 +33,17 @@ namespace Exercicio03.API
 
             services
                 .AddHealthChecks()
-                .AddProcessAllocatedMemoryHealthCheck(512);// 512 MB max allocated memory;
+                .AddProcessAllocatedMemoryHealthCheck(512); // 512 MB max allocated memory;
 
             services
-                .AddHealthChecksUI(s => s.AddHealthCheckEndpoint("check1", "/health"))
+                .AddHealthChecksUI(s => s.AddHealthCheckEndpoint("ready", "http://localhost/health"))
                 .AddInMemoryStorage();
+
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = Configuration["Cache.Connection"];
+                options.InstanceName = Configuration["Cache.Name"];
+            });
 
             services.AddSingleton<IMultiploDeOnzeValidator, MultiploDeOnzeValidator>();
 
@@ -74,13 +80,13 @@ namespace Exercicio03.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHealthChecksUI();
-
+                
+                endpoints.MapHealthChecksUI(options => options.UIPath = "/health-ui");
                 endpoints.MapHealthChecks("/health", new HealthCheckOptions()
                 {
                     Predicate = _ => true,
                     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                }).RequireHost("*:5000", "*.5001");
+                }).RequireHost("*:80", "*:443", "*:5000", "*:5001");
             });
         }
     }
