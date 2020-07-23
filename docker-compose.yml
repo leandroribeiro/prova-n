@@ -13,7 +13,6 @@ services:
     networks:
       - backend
 
-
   exercicio02.database:
     container_name: exercicio02.database
     image: ${REGISTRY:-provanpf}/exercicio02database:${PLATFORM:-linux}-${TAG:-latest}
@@ -34,12 +33,27 @@ services:
     build:
       context: .
       dockerfile: Exercicio03.API/Dockerfile
+    depends_on:
+      - "exercicio03.cache"
     networks:
       - backend
+
+  exercicio03.cache:
+    image: redis
+    container_name: exercicio03_cache
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - backend
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"        
+
 
 networks: 
   backend:
     driver: bridge
+    
     
 # volumes:
 #  mssqldata: 
