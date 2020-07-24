@@ -8,7 +8,11 @@ R: Ao Quadrado, vide testes
 
 ## Questão 2)
 
-Console App utilizando .NET 
+Console App utilizando .NET Core 3.1, Docker, Docker-Compose
+
+<p align="center">
+<img src="./assets/questao2_app.png" alt="Console App Output" width="738">
+</p>
 
 ### Instruções para execução
 
@@ -20,7 +24,7 @@ R: C1 + C2 + C3
 
 ## Questão 3)
 
-Web API utilizando .NET Core 3.1 +Health Check +Swagger UI, XUnit, Docker, Docker-Compose,
+Web API utilizando .NET Core 3.1 +Health Check +Swagger UI, Redis, XUnit, Docker, Docker-Compose,
  
 <p align="center">
 <img src="./assets/questao3_api_doc.png" alt="Swagger UI" width="738">
