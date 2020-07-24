@@ -35,7 +35,8 @@ namespace Exercicio03.API
 
             services
                 .AddHealthChecks()
-                .AddProcessAllocatedMemoryHealthCheck(512); // 512 MB max allocated memory;
+                .AddProcessAllocatedMemoryHealthCheck(512, "memory") // 512 MB max allocated memory;
+                .AddRedis(Configuration["Cache:Connection"], name: "cacheRedis");
 
             services
                 .AddHealthChecksUI(s => s.AddHealthCheckEndpoint("ready", "http://localhost/health"))
