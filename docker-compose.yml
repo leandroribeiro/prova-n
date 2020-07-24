@@ -3,26 +3,22 @@ version: '3.4'
 services:
 
   exercicio02.app:
-    container_name: exercicio02.app
+    container_name: exercicio02_app
     image: ${REGISTRY:-provanpf}/exercicio02app:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Exercicio02.App/Dockerfile
     depends_on:
       - "exercicio02.database"
-    networks:
-      - backend
 
   exercicio02.database:
-    container_name: exercicio02.database
+    container_name: exercicio02_database
     image: ${REGISTRY:-provanpf}/exercicio02database:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Exercicio02/Dockerfile
     ports:
       - "1433:1433"
-    networks:
-      - backend
 #   volumes:
 #      - mssqldata:/var/opt/mssqldata
 
@@ -35,25 +31,15 @@ services:
       dockerfile: Exercicio03.API/Dockerfile
     depends_on:
       - "exercicio03.cache"
-    networks:
-      - backend
 
   exercicio03.cache:
     image: redis
     container_name: exercicio03_cache
     command: redis-server /usr/local/etc/redis/redis.conf
-    networks:
-      - backend
     volumes:
       - ./redis.conf:/usr/local/etc/redis/redis.conf
     ports:
-      - "6379:6379"        
+      - "6379:6379"
 
-
-networks: 
-  backend:
-    driver: bridge
-    
-    
 # volumes:
 #  mssqldata: 
