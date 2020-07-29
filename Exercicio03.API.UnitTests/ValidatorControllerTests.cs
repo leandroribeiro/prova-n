@@ -40,5 +40,21 @@ namespace Exercicio03.API.UnitTests
             var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
             okResult.StatusCode.Should().Be(200);
         }
+        
+        [Theory]
+        [InlineData("1", "a10", "11", "teste")]
+        public void Retornar_BadRequest_Quando_Passado_Array_Contendo_Letras(params string[] numeros)
+        {
+            // Arrange
+            var request = new MultiploDeOnzeRequest(){numbers = numeros};
+            
+            // Act
+            var result = _controller.Post(request);
+            
+            // Assert
+            var okResult = result.Should().BeOfType<BadRequestObjectResult>().Subject;
+            okResult.StatusCode.Should().Be(400);
+            okResult.Value.Should().Be("Deve ser um número");
+        }
     }
 }
