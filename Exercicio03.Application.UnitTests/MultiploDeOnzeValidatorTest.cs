@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Xunit;
 
-namespace Exercicio03.Application.Tests
+namespace Exercicio03.Application.UnitTests
 {
     public class MultiploDeOnzeValidatorTest
     {

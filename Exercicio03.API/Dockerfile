@@ -8,7 +8,7 @@ WORKDIR /src
 COPY "Exercicio03.sln" "Exercicio03.sln"
 COPY "Exercicio03.API/Exercicio03.API.csproj" "Exercicio03.API/Exercicio03.API.csproj"
 COPY "Exercicio03.Application/Exercicio03.Application.csproj" "Exercicio03.Application/Exercicio03.Application.csproj"
-COPY "Exercicio03.Application.Tests/Exercicio03.Application.Tests.csproj" "Exercicio03.Application.Tests/Exercicio03.Application.Tests.csproj"
+COPY "Exercicio03.Application.UnitTests/Exercicio03.Application.UnitTests.csproj" "Exercicio03.Application.UnitTests/Exercicio03.Application.UnitTests.csproj"
 RUN dotnet restore
 
 COPY . .

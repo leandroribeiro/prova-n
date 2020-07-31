@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.API", "Exercici
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.Application", "Exercicio03.Application\Exercicio03.Application.csproj", "{47B5F267-0826-427D-A8FC-7A50520546C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.Application.Tests", "Exercicio03.Application.Tests\Exercicio03.Application.Tests.csproj", "{C9328F18-2815-4F00-AFFD-66061522D5A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.Application.UnitTests", "Exercicio03.Application.UnitTests\Exercicio03.Application.UnitTests.csproj", "{C9328F18-2815-4F00-AFFD-66061522D5A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio02.App", "Exercicio02.App\Exercicio02.App.csproj", "{CDB898D8-43FD-4017-8B92-83B4305E2C66}"
 EndProject
