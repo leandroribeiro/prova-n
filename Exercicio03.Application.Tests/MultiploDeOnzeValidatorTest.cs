@@ -8,9 +8,9 @@ namespace Exercicio03.Application.Tests
     {
         private IMultiploDeOnzeValidator validator;
 
-        public MultiploDeOnzeValidatorTest(IMultiploDeOnzeValidator validator)
+        public MultiploDeOnzeValidatorTest()
         {
-            this.validator = validator;
+            this.validator = new MultiploDeOnzeValidator();
         }
 
         [Theory()]
