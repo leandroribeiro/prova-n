@@ -11,7 +11,7 @@ R: Ao Quadrado, vide testes
 Console App utilizando .NET Core 3.1, Docker, Docker-Compose
 
 <p align="center">
-<img src="./assets/questao2_app.png" alt="Console App Output" width="538">
+<img src="./assets/questao2_app.png" alt="Console App Output" width="338">
 </p>
 
 ### Instruções para execução
