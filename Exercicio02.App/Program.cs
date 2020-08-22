@@ -10,7 +10,7 @@ namespace Exercicio02.App
     {
         static void Main(string[] args)
         {
-            var connection = "Server=exercicio02_database;Initial Catalog=Exercicio02;User Id=sa;Password=Dev123456789";
+            var connection = "Server=exercicio02_database;Database=Exercicio02;User Id=sa;Password=Dev123456789";
 
             using (var conexaoBD = new SqlConnection(connection))
             {
