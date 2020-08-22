@@ -1,18 +1,45 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio01", "Exercicio01\Exercicio01.csproj", "{D4B85C80-E60D-4C1D-8440-5FA5CFEFDEBD}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio01", "Exercicio01\Exercicio01.csproj", "{D4B85C80-E60D-4C1D-8440-5FA5CFEFDEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio01.Test", "Exercicio01.Test\Exercicio01.Test.csproj", "{5DADED5D-16C5-46C5-A8B0-9226740982D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio01.Test", "Exercicio01.Test\Exercicio01.Test.csproj", "{5DADED5D-16C5-46C5-A8B0-9226740982D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.API", "Exercicio03.API\Exercicio03.API.csproj", "{AE5A9F14-4EA6-4B15-8C11-1B818A83F796}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio03.API", "Exercicio03.API\Exercicio03.API.csproj", "{AE5A9F14-4EA6-4B15-8C11-1B818A83F796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.Application", "Exercicio03.Application\Exercicio03.Application.csproj", "{47B5F267-0826-427D-A8FC-7A50520546C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio03.Application", "Exercicio03.Application\Exercicio03.Application.csproj", "{47B5F267-0826-427D-A8FC-7A50520546C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.Application.UnitTests", "Exercicio03.Application.UnitTests\Exercicio03.Application.UnitTests.csproj", "{C9328F18-2815-4F00-AFFD-66061522D5A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio03.Application.UnitTests", "Exercicio03.Application.UnitTests\Exercicio03.Application.UnitTests.csproj", "{C9328F18-2815-4F00-AFFD-66061522D5A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio02.App", "Exercicio02.App\Exercicio02.App.csproj", "{CDB898D8-43FD-4017-8B92-83B4305E2C66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio02.App", "Exercicio02.App\Exercicio02.App.csproj", "{CDB898D8-43FD-4017-8B92-83B4305E2C66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03.API.UnitTests", "Exercicio03.API.UnitTests\Exercicio03.API.UnitTests.csproj", "{EADEA6B9-337A-4A7C-BE85-A0232A6C119B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicio03.API.UnitTests", "Exercicio03.API.UnitTests\Exercicio03.API.UnitTests.csproj", "{EADEA6B9-337A-4A7C-BE85-A0232A6C119B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{135D4168-3B80-4A58-A546-1E9B22CFA2FC}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{5005C9FF-0AE3-4823-8276-2E6553ECCC2E}"
+	ProjectSection(SolutionItems) = preProject
+		redis.conf = redis.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercicio02.Database", "Exercicio02.Database", "{99A5D60B-65D8-4309-BE04-73F1E06B510A}"
+	ProjectSection(SolutionItems) = preProject
+		Exercicio02\Dockerfile = Exercicio02\Dockerfile
+		Exercicio02\entrypoint.sh = Exercicio02\entrypoint.sh
+		Exercicio02\initialize-database.sh = Exercicio02\initialize-database.sh
+		Exercicio02\query.sql = Exercicio02\query.sql
+		Exercicio02\setup.sql = Exercicio02\setup.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{940100C2-E817-46FE-99F3-EC1E3F41CB71}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,5 +75,11 @@ Global
 		{EADEA6B9-337A-4A7C-BE85-A0232A6C119B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EADEA6B9-337A-4A7C-BE85-A0232A6C119B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EADEA6B9-337A-4A7C-BE85-A0232A6C119B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75A8D334-A81C-4964-AB35-9381F11C155A}
 	EndGlobalSection
 EndGlobal
