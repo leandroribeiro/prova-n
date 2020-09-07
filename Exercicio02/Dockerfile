@@ -5,7 +5,6 @@ ENV ACCEPT_EULA=Y
 ENV SA_PASSWORD=Dev123456789
 ENV MSSQL_PID=Developer
 
-# Create work directory
 COPY "Exercicio02/" /home
 COPY "Exercicio02/setup.sql" /home
 
