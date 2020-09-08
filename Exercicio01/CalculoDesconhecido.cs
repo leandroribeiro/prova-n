@@ -2,7 +2,7 @@ using System;
 
 namespace Exercicio01
 {
-    public class Prova
+    public class CalculoDesconhecido
     {
         public int Calcular(int numero)
         {

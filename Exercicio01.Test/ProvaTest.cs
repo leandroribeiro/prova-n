@@ -5,11 +5,17 @@ namespace Exercicio01.Test
 {
     public class ProvaTest
     {
-        private Prova _prova;
+        private CalculoDesconhecido _calculoDesconhecido;
+        private CalculoFatorial _calculoFatorial;
+        private CalculoAoQuadrado _calculoAoQuadrado;
+        private CalculoSomatorio _calculoSomatorio;
 
         public ProvaTest()
         {
-            _prova = new Prova();
+            _calculoAoQuadrado = new CalculoAoQuadrado();
+            _calculoSomatorio = new CalculoSomatorio();
+            _calculoDesconhecido = new CalculoDesconhecido();
+            _calculoFatorial = new CalculoFatorial();
         }
 
         [Theory()]
@@ -25,9 +31,9 @@ namespace Exercicio01.Test
         [InlineData(10)]
         public void Retornar_Fatorial_Quando_Numero_Inteiro_Positivo(int numero)
         {
-            var resultado = _prova.Calcular(numero);
+            var resultado = _calculoDesconhecido.Calcular(numero);
 
-            var esperado = Enumerable.Range(1, numero).Aggregate(1, (p, item) => p * item);
+            var esperado = _calculoFatorial.Calcular(numero);
             
             Assert.Equal(esperado, resultado);
         }
@@ -45,9 +51,9 @@ namespace Exercicio01.Test
         [InlineData(10)]
         public void Retornar_AoQuadrado_Quando_Numero_Inteiro_Positivo(int numero)
         {
-            var resultado = _prova.Calcular(numero);
+            var resultado = _calculoDesconhecido.Calcular(numero);
 
-            var esperado = numero * numero;
+            var esperado = _calculoAoQuadrado.Calcular(numero);
             
             Assert.Equal(esperado, resultado);
         }
@@ -65,9 +71,9 @@ namespace Exercicio01.Test
         [InlineData(10)]
         public void Retornar_Somatorio_Quando_Numero_Inteiro_Positivo(int numero)
         {
-            var resultado = _prova.Calcular(numero);
+            var resultado = _calculoDesconhecido.Calcular(numero);
 
-            var esperado = Enumerable.Range(0, numero).Sum();
+            var esperado = _calculoSomatorio.Calcular(numero);
             
             Assert.Equal(esperado, resultado);
         }
@@ -85,7 +91,7 @@ namespace Exercicio01.Test
         [InlineData(10)]
         public void Retornar_Somatorio_Numeros_Pares_Quando_Numero_Inteiro_Positivo(int numero)
         {
-            var resultado = _prova.Calcular(numero);
+            var resultado = _calculoDesconhecido.Calcular(numero);
 
             var esperado = Enumerable.Range(0, numero).Where(x=>x%2 == 0).Sum();
             
@@ -105,7 +111,7 @@ namespace Exercicio01.Test
         [InlineData(10)]
         public void Retornar_Dois_Elevado_Ao_Numero_Quando_Numero_Inteiro_Positivo(int numero)
         {
-            var resultado = _prova.Calcular(numero);
+            var resultado = _calculoDesconhecido.Calcular(numero);
 
             var esperado = Enumerable.Range(0, numero).Where(x=>x%2 == 0).Sum();
             
