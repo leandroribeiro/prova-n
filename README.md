@@ -1,6 +1,15 @@
 Prova N**
 ============
-Exercícios propostos para prova da empresa N, utilizando .NET Core 3.1, Swagger Tools, XUnit, MSSQL Server 2019 Linux, Docker e Docker Compose 
+Exercícios propostos para prova da empresa N, utilizando:
+
+- .NET Core 3.1;
+- Swagger Tools;
+- XUnit;
+- MSSQL Server 2019 Linux;
+- Docker + Docker Compose;
+- Redis;
+- HealthChecks;
+- Fluent Assertions;
 
 ## Questão 1)
 
@@ -8,7 +17,7 @@ R: Ao Quadrado, vide testes
 
 ## Questão 2)
 
-Console App utilizando .NET Core 3.1, Docker, Docker-Compose
+Console App
 
 <p align="center">
 <img src="./assets/questao2_app.png" alt="Console App Output" width="338">
@@ -24,7 +33,7 @@ R: C1 + C2 + C3
 
 ## Questão 3)
 
-Web API utilizando .NET Core 3.1 + Health Check + Swagger UI + Fluent Validation, Redis, XUnit, Docker, Docker-Compose,
+Web API
  
 <p align="center">
 <img src="./assets/questao3_api_doc.png" alt="Swagger UI" width="738">
